@@ -1,0 +1,119 @@
+{
+  "contractName": "Cheese",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058205da0603dd8c7b6fa0879bb6223c6e71a0052f390b700fface7211f2b13a591080029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058205da0603dd8c7b6fa0879bb6223c6e71a0052f390b700fface7211f2b13a591080029",
+  "sourceMap": "26:50:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:50:0;;;;;;;",
+  "deployedSourceMap": "26:50:0:-;;;;;",
+  "source": "pragma solidity ^0.4.23;\n\ncontract Cheese {\n  \n  struct EndUser {\n    \n  }\n}\n",
+  "sourcePath": "C:\\Users\\demen\\Code\\truffleProject\\contracts\\Cheese.sol",
+  "ast": {
+    "absolutePath": "/C/Users/demen/Code/truffleProject/contracts/Cheese.sol",
+    "exportedSymbols": {
+      "Cheese": [
+        3
+      ]
+    },
+    "id": 4,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3,
+        "linearizedBaseContracts": [
+          3
+        ],
+        "name": "Cheese",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Cheese.EndUser",
+            "id": 2,
+            "members": [],
+            "name": "EndUser",
+            "nodeType": "StructDefinition",
+            "scope": 3,
+            "src": "49:25:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 4,
+        "src": "26:50:0"
+      }
+    ],
+    "src": "0:77:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/demen/Code/truffleProject/contracts/Cheese.sol",
+    "exportedSymbols": {
+      "Cheese": [
+        3
+      ]
+    },
+    "id": 4,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3,
+        "linearizedBaseContracts": [
+          3
+        ],
+        "name": "Cheese",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Cheese.EndUser",
+            "id": 2,
+            "members": [],
+            "name": "EndUser",
+            "nodeType": "StructDefinition",
+            "scope": 3,
+            "src": "49:25:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 4,
+        "src": "26:50:0"
+      }
+    ],
+    "src": "0:77:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-07-07T22:59:55.452Z"
+}
