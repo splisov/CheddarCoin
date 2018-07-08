@@ -6,7 +6,7 @@ contract CheddarCoin is StandardToken {
     string public symbol = "CHC";
     uint public decimals = 18;
     uint public INITIAL_SUPPLY = 10000 * (10 ** decimals);
-    address public investors = 0x2379698bF22AF19f2a89D44dcA053A8efc53CA57; // Investor address
+    address public investors = 0x0d1d98b7E8a70Da167034A9e5801b1d96B0Fcd05; // Investor address
     uint public investorRate = 10;  //hundredths
 
     constructor () public {
@@ -33,7 +33,7 @@ contract CheddarCoin is StandardToken {
         return true;
     }
 
-    function getCheese(address addr) public returns (uint){
+    function getCheese(address addr) view public returns (uint){
         return balances[addr];
     }
 
