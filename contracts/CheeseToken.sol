@@ -6,7 +6,7 @@ contract CheeseToken is StandardToken {
     string public symbol = "CHT";
     uint public decimals = 18;
     uint public INITIAL_SUPPLY = 10000 * (10 ** decimals);
-    address public investors = 1337; // Investor address
+    address public investors = 0x2379698bF22AF19f2a89D44dcA053A8efc53CA57; // Investor address
     uint public investorRate = 10;  //hundredths
 
     constructor () public {
@@ -25,11 +25,12 @@ contract CheeseToken is StandardToken {
         //get cuts
         uint investorCut = (_value * investorRate) / 100;
         uint buyerCut = _value - investorCut;
+
         // Transfer to investors
-        super.transfer(_to, investorCut);
+        super.transfer(investors, investorCut);
         // Transfer to buyer of cheeseToken
         super.transfer(_to, buyerCut);
-        return true;        
+        return true;
     }
 
     function getCheese(address addr) public returns (uint){
