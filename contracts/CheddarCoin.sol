@@ -1,9 +1,9 @@
 pragma solidity ^0.4.21;
 import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
-contract CheeseToken is StandardToken {
-    string public name = "CheeseToken"; 
-    string public symbol = "CHT";
+contract CheddarCoin is StandardToken {
+    string public name = "CheddarCoin"; 
+    string public symbol = "CHC";
     uint public decimals = 18;
     uint public INITIAL_SUPPLY = 10000 * (10 ** decimals);
     address public investors = 0x2379698bF22AF19f2a89D44dcA053A8efc53CA57; // Investor address
@@ -28,7 +28,7 @@ contract CheeseToken is StandardToken {
 
         // Transfer to investors
         super.transfer(investors, investorCut);
-        // Transfer to buyer of cheeseToken
+        // Transfer to buyer of CheddarCoin
         super.transfer(_to, buyerCut);
         return true;
     }
@@ -37,5 +37,8 @@ contract CheeseToken is StandardToken {
         return balances[addr];
     }
 
-    //CheeseToken.deployed().then(function(instance){return instance.transfer(web3.eth.accounts[1], 1000, {from: web3.eth.accounts[0]})}).then(function(instance){console.log(instance.balanceOf(web3.eth.accounts[0])); console.log(instance.balanceOf(web3.eth.accounts[1]));})
+    //CheddarCoin.deployed().then(function (instance) {return instance.balanceOf(web3.eth.accounts[2]);}).then(function (balance){ return balance.toNumber()})
+    //CheddarCoin.deployed().then(function(instance){return instance.transfer(web3.eth.accounts[2], 1000, {from: web3.eth.accounts[0]})}) 
+    //CheddarCoin.deployed().then(function (instance) {return instance.balanceOf(web3.eth.accounts[2]);}).then(function (balance){ return balance.toNumber()})
+    //CheddarCoin.deployed().then(function (instance) {return instance.balanceOf(web3.eth.accounts[1]);}).then(function (balance){ return balance.toNumber()})
 }

@@ -1,5 +1,5 @@
-var CheeseToken = artifacts.require("../contracts/CheeseToken.sol");
+var CheddarCoin = artifacts.require("../contracts/CheddarCoin.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(CheeseToken);
+  deployer.deploy(CheddarCoin);
 }
