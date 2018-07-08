@@ -13,8 +13,7 @@ contract CheeseToken is StandardToken {
         balances[msg.sender] = INITIAL_SUPPLY;
     }
 
-    function transferFrom(
-        address _from,
+    function transfer(
         address _to,
         uint256 _value
     )
@@ -22,13 +21,20 @@ contract CheeseToken is StandardToken {
     returns (bool)
     {
         //check if divisible
-        require(_value >= 1000, "Value too low, use over 1000 weis");
+        require(_value >= 1000, "Value too low, use 1000 or over weis");
         //get cuts
         uint investorCut = (_value * investorRate) / 100;
         uint buyerCut = _value - investorCut;
         // Transfer to investors
-        super.transferFrom(_from, investors, investorCut);
+        super.transfer(_to, investorCut);
         // Transfer to buyer of cheeseToken
-        super.transferFrom(_from, _to, buyerCut);        
+        super.transfer(_to, buyerCut);
+        return true;        
     }
+
+    function getCheese(address addr) public returns (uint){
+        return balances[addr];
+    }
+
+    //CheeseToken.deployed().then(function(instance){return instance.transfer(web3.eth.accounts[1], 1000, {from: web3.eth.accounts[0]})}).then(function(instance){console.log(instance.balanceOf(web3.eth.accounts[0])); console.log(instance.balanceOf(web3.eth.accounts[1]));})
 }
